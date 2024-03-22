@@ -1,0 +1,216 @@
+@font-face{
+    src: url(./BarlowSemiCondensed-Regular.ttf);
+    font-family: BarlowSemiCondensed-Regular;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'BarlowSemiCondensed-Regular', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-image: url(./images/background.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Navbar */
+
+ul{
+    list-style-type: none;
+}
+.navbar{
+    color: #fff;
+    height: 60px;
+    width: 1370px;
+}
+
+.navbar .logo{
+    font-size: x-large;
+    font-weight: bold;
+}
+.navbar a{
+    color: #dacff7;
+    text-shadow: 2px 2px 3px #000000;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+.navbar a:hover{
+    color: #ffffffb0;
+    text-shadow: 0px 0px 5px #ff5100;
+}
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 100%;
+}
+.navbar ul{
+    display: flex;
+}
+.navbar ul li{
+    margin-left: 20px;
+}
+
+
+#bg,
+#tel-svg-1, #tel-svg-2, #tel-svg-3,
+#des-svg-1, #des-svg-2,
+#pho-svg,
+#telescope,
+#control-desk,
+#phone
+{
+    position: absolute;
+}
+
+/* Background Image */
+
+#bg{
+    margin: 0;
+    padding: 0;
+    border: 2px solid #1c1c1dce;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Telescope */
+
+#telescope{
+    width: 941px;
+    height: 825px;
+    left: 118px;
+    display: block;
+    top: -30px;
+    background: transparent;
+    opacity: 1;
+    z-index: 1;
+    visibility: hidden;
+} 
+#tel-svg-1{
+    width: 125px;
+    height: 650px;
+    left: 560px;
+    top: 90px;
+    bottom: 0;
+    transform: rotate(-90deg);
+    opacity: 0;
+    background-color: #00ff6a;
+    border-radius: 45%;
+    z-index: 11;
+}
+#tel-svg-2{
+    width: 180px;
+    height: 525px;
+    left: 610px;
+    top: 28px;
+    bottom: 0;
+    transform: rotate(-32deg);
+    opacity: 0;
+    background-color: #00ff6a;
+    border-radius: 40%;
+    border-bottom-left-radius: 20%;
+    z-index: 11;
+}
+#tel-svg-3{
+    width: 286px;
+    height: 182px;
+    left: 80px;
+    top: 299px;
+    bottom: 0;
+    transform: rotate(97deg);
+    opacity: 0;
+    background-color: #00ff6a;
+    border-radius: 25%;
+    z-index: 11;
+}
+#tel-svg-1:hover ~ #telescope{
+    visibility: visible;
+}
+#tel-svg-2:hover ~ #telescope{
+    visibility: visible;
+}
+#tel-svg-3:hover ~ #telescope{
+    visibility: visible;
+}
+
+/* Control Desk */
+
+#control-desk{
+    width: 465px;
+    height: 415px;
+    left: 736px;
+    top: 430px;
+    bottom: 0;
+    opacity: 1;
+    z-index: 3;
+    visibility: hidden;
+}
+#des-svg-1{
+    width: 250px;
+    height: 130px;
+    left: 805px;
+    top: 535px;
+    bottom: 0;
+    opacity: 0;
+    border-bottom-left-radius: 70%;
+    background-color: #ffae00;
+    z-index: 13;
+}
+#des-svg-2{
+    width: 170px;
+    height: 100px;
+    left: 990px;
+    top: 580px;
+    bottom: 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    background-color: #a200ff;
+    border-bottom-right-radius: 90%;
+    z-index: 13;
+}
+#des-svg-1:hover ~ #control-desk{
+    visibility: visible;
+}
+#des-svg-2:hover ~ #control-desk{
+    visibility: visible;
+}
+
+/* Phone */
+
+#phone{
+    width: 130px;
+    left: 757px;
+    top: 570px;
+    bottom: 0;
+    opacity: 1;
+    z-index: 8;
+    visibility: hidden;
+}
+#pho-svg{
+    width: 40px;
+    height: 20px;
+    left: 815px;
+    top: 635px;
+    bottom: 0;
+    opacity: 0;
+    background: transparent;
+    border-radius: 40%;
+    background-color: #ff5100;
+    z-index: 18;
+}
+#pho-svg:hover ~ #phone{
+    visibility: visible;
+}
